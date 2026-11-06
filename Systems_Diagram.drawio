@@ -1,130 +1,169 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="QdVEf4_vkabjAejNRWlD">
-    <mxGraphModel dx="3648" dy="2206" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3648" dy="2206" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="start" parent="1" style="shape=mxgraph.flowchart.terminator;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;START — User opens the website&lt;/b&gt;" vertex="1">
-          <mxGeometry height="70" width="340" x="370" y="25" as="geometry" />
+        <mxCell id="start" parent="1" style="shape=mxgraph.flowchart.terminator;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;START — User opens the website&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="360" x="580" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="web" parent="1" style="rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Web Pages (templates)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Settings form + &quot;I’m up&quot; button" vertex="1">
-          <mxGeometry height="100" width="340" x="370" y="170" as="geometry" />
+        <mxCell id="web" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Web Pages (templates)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Enter wake time, reason + ntfy topic" vertex="1">
+          <mxGeometry height="100" width="360" x="580" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="flask" parent="1" style="rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Flask App — app.py (entry point)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Routes: shows pages, receives form + button" vertex="1">
-          <mxGeometry height="120" width="340" x="370" y="430" as="geometry" />
+        <mxCell id="flask" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Flask App — app.py&lt;/b&gt;&lt;br&gt;&lt;br&gt;Entry point: handle routes and settings" vertex="1">
+          <mxGeometry height="110" width="360" x="580" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="settings" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=18;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;settings.json&lt;/b&gt;&lt;br&gt;&lt;br&gt;Wake time, reason for getting up, ntfy topic" vertex="1">
-          <mxGeometry height="140" width="340" x="990" y="410" as="geometry" />
+        <mxCell id="settings" parent="1" style="shape=cylinder3;boundedLbl=1;size=18;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;settings.json&lt;/b&gt;&lt;br&gt;&lt;br&gt;Wake time, reason for getting up, ntfy topic" vertex="1">
+          <mxGeometry height="150" width="330" x="1210" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="quotes" parent="1" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Quotes&lt;/b&gt;&lt;br&gt;&lt;br&gt;List of motivational quotes + random picker" vertex="1">
-          <mxGeometry height="110" width="310" x="1470" y="1030" as="geometry" />
+        <mxCell id="scheduler" parent="1" style="fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Scheduler&lt;/b&gt;&lt;br&gt;&lt;br&gt;Load wake time and check the clock" vertex="1">
+          <mxGeometry height="100" width="360" x="580" y="610" as="geometry" />
         </mxCell>
-        <mxCell id="scheduler" parent="1" style="rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Scheduler&lt;/b&gt;&lt;br&gt;&lt;br&gt;Watches the clock, checks every minute" vertex="1">
-          <mxGeometry height="110" width="340" x="990" y="730" as="geometry" />
+        <mxCell id="wake" parent="1" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Wake time reached?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="160" width="320" x="600" y="820" as="geometry" />
         </mxCell>
-        <mxCell id="sender" parent="1" style="rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Notification Sender&lt;/b&gt;&lt;br&gt;&lt;br&gt;Builds message: reason + quote; sends with requests library" vertex="1">
-          <mxGeometry height="130" width="340" x="990" y="1030" as="geometry" />
+        <mxCell id="clockwait" parent="1" style="fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Scheduler: wait 1 minute&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="330" x="1210" y="855" as="geometry" />
         </mxCell>
-        <mxCell id="ntfy" parent="1" style="shape=cloud;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;ntfy.sh&lt;/b&gt;&lt;br&gt;&lt;br&gt;External push notification service (API)" vertex="1">
-          <mxGeometry height="160" width="350" x="370" y="1015" as="geometry" />
+        <mxCell id="quotes" parent="1" style="fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Quotes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Motivational quote list + random picker" vertex="1">
+          <mxGeometry height="110" width="320" x="60" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="phone" parent="1" style="rounded=1;arcSize=18;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=18;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;User’s Phone&lt;/b&gt;&lt;br&gt;&lt;br&gt;Receives the wake-up notification" vertex="1">
-          <mxGeometry height="110" width="270" x="40" y="735" as="geometry" />
+        <mxCell id="sender" parent="1" style="fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Notification Sender&lt;/b&gt;&lt;br&gt;&lt;br&gt;Build reason + quote message; send with requests; count attempt" vertex="1">
+          <mxGeometry height="130" width="360" x="580" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="e0" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="web" value="">
+        <mxCell id="ntfy" parent="1" style="shape=cloud;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;ntfy.sh — external API&lt;/b&gt;&lt;br&gt;&lt;br&gt;Push notification service" vertex="1">
+          <mxGeometry height="160" width="410" x="555" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="phone" parent="1" style="rounded=1;arcSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;User’s Phone&lt;/b&gt;&lt;br&gt;&lt;br&gt;Receive the wake-up notification" vertex="1">
+          <mxGeometry height="100" width="360" x="580" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="up" parent="1" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;User confirmed “I’m up”?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="160" width="320" x="600" y="1850" as="geometry" />
+        </mxCell>
+        <mxCell id="max" parent="1" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Max attempts reached?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="160" width="330" x="1210" y="1850" as="geometry" />
+        </mxCell>
+        <mxCell id="stop" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;Web Pages → Flask App&lt;/b&gt;&lt;br&gt;&lt;br&gt;“I’m up” button sends confirmation; app signals scheduler to stop" vertex="1">
+          <mxGeometry height="140" width="330" x="60" y="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="shape=mxgraph.flowchart.terminator;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=19;fontColor=#1f2937;spacing=12;" value="&lt;b&gt;END — Stop wake-up reminders&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="60" y="2160" as="geometry" />
+        </mxCell>
+        <mxCell id="flow0" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="web" value="opens settings page">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e1" edge="1" parent="1" source="web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.38;exitY=1;exitDx=0;exitDy=0;entryX=0.38;entryY=0;entryDx=0;entryDy=0;" target="flask" value="submits settings form">
+        <mxCell id="flow1" edge="1" parent="1" source="web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="flask" value="submits settings form">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-105" y="-20" as="offset" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e2" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.28;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="settings" value="writes JSON data (saves settings)">
+        <mxCell id="flow2" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="web" value="returns HTML page">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-70" as="offset" />
+            <Array as="points">
+              <mxPoint x="450" y="423" />
+              <mxPoint x="450" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow3" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="settings" value="writes settings JSON">
           <mxGeometry relative="1" as="geometry">
             <mxPoint y="-22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e3" edge="1" parent="1" source="settings" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.76;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" target="flask" value="reads JSON data (loads saved settings)">
+        <mxCell id="flow4" edge="1" parent="1" source="settings" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" target="flask" value="loads saved JSON">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint y="23" as="offset" />
+            <mxPoint y="24" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e4" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" target="web" value="sends back the page (HTML)">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-105" as="offset" />
-            <Array as="points">
-              <mxPoint x="285" y="460" />
-              <mxPoint x="285" y="230" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e5" edge="1" parent="1" source="settings" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="scheduler" value="reads wake time">
+        <mxCell id="flow5" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="scheduler" value="starts background monitoring">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e6" edge="1" parent="1" source="scheduler" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="scheduler" value="checks clock every minute">
+        <mxCell id="flow6" edge="1" parent="1" source="settings" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="scheduler" value="provides saved wake time">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="75" as="offset" />
+            <mxPoint y="-24" as="offset" />
             <Array as="points">
-              <mxPoint x="1410" y="763" />
-              <mxPoint x="1410" y="813" />
+              <mxPoint x="1375" y="660" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e7" edge="1" parent="1" source="scheduler" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sender" value="wake time reached — send now">
+        <mxCell id="flow7" edge="1" parent="1" source="scheduler" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wake" value="compares current time to wake time">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e8" edge="1" parent="1" source="quotes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.45;entryDx=0;entryDy=0;" target="sender" value="passes one random quote">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint y="-25" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e9" edge="1" parent="1" source="sender" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ntfy" value="HTTP POST — wake-up message">
+        <mxCell id="flow8" edge="1" parent="1" source="wake" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="clockwait" value="No">
           <mxGeometry relative="1" as="geometry">
             <mxPoint y="-22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e10" edge="1" parent="1" source="ntfy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="phone" value="push notification">
+        <mxCell id="flow9" edge="1" parent="1" source="clockwait" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;" target="scheduler" value="checks again after 1 minute">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-15" as="offset" />
+            <mxPoint x="30" as="offset" />
             <Array as="points">
-              <mxPoint x="175" y="1095" />
+              <mxPoint x="1670" y="900" />
+              <mxPoint x="1670" y="630" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e11" edge="1" parent="1" source="phone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="web" value="user opens page, presses &quot;I’m up&quot;">
+        <mxCell id="flow10" edge="1" parent="1" source="wake" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sender" value="Yes — send now">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-30" as="offset" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow11" edge="1" parent="1" source="quotes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" target="sender" value="passes one random quote">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow12" edge="1" parent="1" source="sender" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ntfy" value="HTTP POST — reason + quote">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow13" edge="1" parent="1" source="ntfy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="phone" value="push notification">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow14" edge="1" parent="1" source="phone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="up" value="wait for confirmation or 1 minute">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow15" edge="1" parent="1" source="up" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="stop" value="Yes — presses “I’m up” on website">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow16" edge="1" parent="1" source="stop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="end" value="stop signal — end the nagging">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow17" edge="1" parent="1" source="up" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="max" value="No — still unconfirmed">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow18" edge="1" parent="1" source="max" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="sender" value="No — retry every minute">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
             <Array as="points">
-              <mxPoint x="175" y="195" />
+              <mxPoint x="1700" y="1930" />
+              <mxPoint x="1700" y="1165" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e12" edge="1" parent="1" source="web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="flask" value="&quot;I’m up&quot; confirmation">
+        <mxCell id="flow19" edge="1" parent="1" source="max" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=17;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="end" value="Yes — attempt limit reached">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="100" y="25" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e13" edge="1" parent="1" source="flask" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.65;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;dashed=1;" target="scheduler" value="stop signal — end the nagging">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint y="-20" as="offset" />
+            <mxPoint y="-24" as="offset" />
             <Array as="points">
-              <mxPoint x="591" y="635" />
-              <mxPoint x="1041" y="635" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e14" edge="1" parent="1" source="sender" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#526174;strokeWidth=2;fontSize=16;fontColor=#243447;labelBackgroundColor=#ffffff;exitX=0.72;exitY=1;exitDx=0;exitDy=0;entryX=0.28;entryY=1;entryDx=0;entryDy=0;" target="sender" value="repeats every minute until &quot;I’m up&quot;&lt;br&gt;or max attempts reached">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint y="30" as="offset" />
-            <Array as="points">
-              <mxPoint x="1235" y="1240" />
-              <mxPoint x="1085" y="1240" />
+              <mxPoint x="1375" y="2200" />
             </Array>
           </mxGeometry>
         </mxCell>
