@@ -1,9 +1,26 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route("/")
+posts = [
+
+    {
+        'author': 'Anand',
+        'title': 'Wake Up Text Bot',
+        'content': 'This is a wake up text both that sends a text to yourself to wake up in the morning',
+        'date_posted': 'November 06, 2026'
+    },
+
+    {
+        'author': 'Anand',
+        'title': 'Wake Up Text Bot',
+        'content': 'This is a wake up text both that sends a text to yourself to wake up in the morning',
+        'date_posted': 'November 06, 2026'
+    }
+]
+
+@app.route("/home")
 def hello():
-    return render_template("home.html")
+    return render_template("home.html", posts=posts)
 
 if __name__ == '__main__':
     app.run(debug=True)
