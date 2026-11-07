@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 posts = [
@@ -18,9 +18,17 @@ posts = [
     }
 ]
 
-@app.route("/home")
-def hello():
-    return render_template("home.html", posts=posts)
+@app.route("/home", methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        waketime = request.form.get("waketime")
+        reason = request.form.get("reason")
+        quote = request.form.get("quote")
+        ntfy_topic = request.form.get("ntfy_topic")
+        print(waketime, reason, quote, ntfy_topic)
+        return render_template("home.html", posts=posts)
+    else:
+        return render_template("home.html", posts=posts)
 
 @app.route("/about")
 def about():
