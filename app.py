@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import json
 app = Flask(__name__)
 
 posts = [
@@ -18,6 +19,8 @@ posts = [
     }
 ]
 
+
+
 @app.route("/home", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -29,6 +32,19 @@ def home():
         return render_template("home.html", posts=posts)
     else:
         return render_template("home.html", posts=posts)
+
+settings = {
+    "waketime": waketime,
+    "reason": reason,
+    "quote": quote,
+    "ntfy_topic": ntfy_topic
+}
+
+with open(settings.json, "w") as f:
+    json.dump(settings, f)
+
+
+
 
 @app.route("/about")
 def about():
