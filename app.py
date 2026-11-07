@@ -29,22 +29,21 @@ def home():
         quote = request.form.get("quote")
         ntfy_topic = request.form.get("ntfy_topic")
         print(waketime, reason, quote, ntfy_topic)
+        
+        settings = {
+            "waketime": waketime,
+            "reason": reason,
+            "quote": quote,
+                "ntfy_topic": ntfy_topic
+        }
+
+        with open(settings.json, "w") as f:
+            json.dump(settings, f)
+
         return render_template("home.html", posts=posts)
+
     else:
         return render_template("home.html", posts=posts)
-
-settings = {
-    "waketime": waketime,
-    "reason": reason,
-    "quote": quote,
-    "ntfy_topic": ntfy_topic
-}
-
-with open(settings.json, "w") as f:
-    json.dump(settings, f)
-
-
-
 
 @app.route("/about")
 def about():
