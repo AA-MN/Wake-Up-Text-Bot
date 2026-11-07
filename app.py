@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import json
+import json, os
 app = Flask(__name__)
 
 posts = [
@@ -23,6 +23,17 @@ posts = [
 
 @app.route("/home", methods=['GET', 'POST'])
 def home():
+
+    if os.path.exists("settings.json"):
+        with open("settings.json", "r") as f:
+            prefs = json.load(f)
+    else:
+        prefs = {
+            "waketime": "",
+            "reason": "",
+            "quote": "",
+            "ntfy_topic": ""
+        }
     if request.method == 'POST':
         waketime = request.form.get("waketime")
         reason = request.form.get("reason")
@@ -40,10 +51,10 @@ def home():
         with open(settings.json, "w") as f:
             json.dump(settings, f)
 
-        return render_template("home.html", posts=posts)
+        return render_template("home.html", posts=posts, settings=settings)
 
     else:
-        return render_template("home.html", posts=posts)
+        return render_template("home.html", posts=posts, settings=settings)
 
 @app.route("/about")
 def about():
