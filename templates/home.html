@@ -6,4 +6,31 @@
         <p>{{ post.author }} on {{ post.date_posted }}</p>
         <p>{{ post.content }}</p>
     {% endfor %}
+
+    <form method="post">
+
+    <p>
+        <label for="waketime">Wake Up Time:</label>
+        <input type="time" id = "waketime" name="user_waketime">
+    </p>
+    <p>
+        <label for="reason">Wake Up Reason:</label>
+        <input type="text" id = "reason" name="user_reason">
+    </p>
+    <p>
+        <label for="quote">Quote Choice:</label>
+        <input type="text" id = "quote" name="user_quote">
+    </p>
+    <p>
+        <label for="ntfy_topic">Ntfy Topic:</label>
+        <input type="text" id = "ntfy_topic" name="user_ntfy_topic">
+    </p>
+
+    <p class = button>
+        <button type="submit">Submit Form</button>
+    </p>
+
+    </form>
+
+
 {% endblock content %}
