@@ -26,9 +26,9 @@ def home():
 
     if os.path.exists("settings.json"):
         with open("settings.json", "r") as f:
-            prefs = json.load(f)
+            settings = json.load(f)
     else:
-        prefs = {
+        settings = {
             "waketime": "",
             "reason": "",
             "quote": "",
@@ -45,10 +45,10 @@ def home():
             "waketime": waketime,
             "reason": reason,
             "quote": quote,
-                "ntfy_topic": ntfy_topic
+            "ntfy_topic": ntfy_topic
         }
 
-        with open(settings.json, "w") as f:
+        with open("settings.json", "w") as f:
             json.dump(settings, f)
 
         return render_template("home.html", posts=posts, settings=settings)
